@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+<title>site</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE-edge">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<style>
+
+
+ 
+  *{
+
+       margin: 0;
+       padding: 0;
+       font-family: sans-serif;
+      
+
+  }
+
+
+  .topo{
+
+    width: 100%;
+     height: 100px;
+     background-color: rgb(255, 115, 0);
+     display: flex;
+     justify-content: center;     
+     align-items: center;
+    
+
+  }
+
+  .titulo{
+
+   display: flex;
+   justify-content: center;
+   flex:90%
+
+  }
+
+  .titulo h1{
+
+     color:rgb(255, 255, 255);
+     
+     
+     
+     
+
+  }
+
+
+  .icon1{
+
+    flex:5%;
+    margin-left: 5%;
+    align-items: center;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+  .icon2{
+
+    flex:5%;
+   margin-right: 5%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+  }
+
+  .icon1 a{
+
+    color:rgb(255, 255, 255);
+   
+    font-size: 25px;
+    
+
+    
+
+  }
+
+  .icon2 a{
+
+   color:rgb(255, 255, 255);
+   font-size: 25px;
+   display: flex;
+   justify-content: center;
+   text-align: center;
+   align-items: center;
+  }
+
+  .rodape{
+
+
+     height: 200px;
+     background-color: rgb(0, 0, 0);
+     display: flex;
+     justify-content: center;
+     align-items:center;
+     
+
+
+  }
+
+ .titufoot{
+
+
+   color:white;
+
+ }
+
+ .sessao{
+
+
+   height: 1000px;
+   display:flex;
+   justify-content: center;
+   align-items: center;
+   background-color: rgb(239, 243, 246);
+
+ }
+ .redessociais{
+
+   height:100px;
+   background-color: rgb(0, 0, 0);
+   display:flex;
+   justify-content: center;
+   align-items: center;
+
+
+ }
+
+ .redes{
+
+
+    color:white;
+    font-size: 30px;
+   
+
+ }
+
+ .redes a{
+
+    color:white;
+    margin: 10px;
+    
+
+ }
+ .listaDeLinks{
+
+    list-style-type: none;
+    
+    
+
+ }
+
+ .linkRo a{
+
+   color:rgb(129, 129, 129);
+   text-decoration: none;
+   font-size: 11px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: 10px;
+   
+ }
+
+ .menuLinks{
+
+  
+   position: relative;
+   float: left;
+   
+   
+   
+  
+
+ }
+
+ .headline1{
+
+   
+   margin-top: 20px;
+   justify-content: center;
+   align-items: center;
+   
+
+ }
+
+ .img-food{
+
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    
+ }
+ 
+ @media only screen and (max-width: 535px){
+
+.sessao{
+
+
+     display: block;
+     justify-content: center;
+     align-items: center;
+     max-width: 100%;
+
+}
+
+.img-food{
+display: flex;
+
+justify-content: center;
+align-items: center;
+
+
+
+}
+
+}
+.heaad{
+
+  display: flex;
+  
+  justify-content: center;
+  align-items: center;
+
+}
+
+.produto{
+
+ height: 1250px;
+ max-width: 100%;
+ 
+}
+
+.sacola{
+
+width: 300px;
+display: grid;
+height: auto;
+margin: 50px;
+background-color: rgb(255, 255, 255);
+padding: 8px;
+border-radius: 10px;
+position: fixed;
+z-index: 1001;
+display:none;
+
+
+}
+
+.botQuant{
+
+
+ height: 24px;
+ width: 65px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ position: relative;
+bottom: 2px;
+ background-color: white;
+ border-radius: 3px;
+}
+
+.botQuant2{
+
+
+  height: 80px;
+ width: 40px;
+ display: flex;
+ background-color: white;
+ padding-right: 15px;
+ border-radius: 3px;
+
+}
+
+
+
+body{
+
+ background-color:rgb(239, 243, 246); 
+ 
+
+}
+
+.modal{
+
+width: 100%;
+height: 1250px;
+background-color: rgba(0, 0, 0, 0.466);
+position: fixed;
+z-index: 1;
+display: none;
+
+
+}
+
+</style>
+
+
+</head>
+
+<body>
+
+    <div class="topo">
+       <div class="icon1"><a href="#"><i class="bi bi-list"></i></a></div>
+       <div class="titulo">
+
+         <h1>Delicias food</h1> 
+
+       </div>
+       <div class="icon2"><a onclick="VerCart()" href="#"><i class="bi bi-bag-fill"></i></a>
+        <p onclick="VerCart()" id="numB" style="padding: 2px; color:rgb(38, 36, 36); position: relative; right: 17px;top:2px; font-size: 9px; cursor: pointer;">0</p>
+      </div>  
+       
+
+    </div>
+
+<div style="height: 100px; display: flex; justify-content: center; align-items: center;">
+
+<h1 style="font-family: sans-serif;">Cardápio</h1>
+
+</div>
+<div style="display: flex; justify-content: center; align-items: center;">
+<p id="avisoAdc"  style="border-radius: 5px; padding: 10px; background-color: rgb(255, 255, 255); position: fixed; color: rgb(255, 0, 0); display: none;z-index: 1001;">ítem adicionado ao carrinho !</p>
+<p id="UpDate" style="text-align: center; border-radius: 5px; padding: 10px; background-color: rgb(32, 31, 31); position: fixed; color: rgb(255, 255, 255); display:none;z-index: 1002; max-width: 250px;">ATUALIZAR SACOLA</p>
+
+</div>
+<div style="display: flex; justify-content: center; align-items: center;">
+
+<div id="modal" class="modal"></div>
+  <div  id="BoxSacola" class="sacola">
+  
+  <button onclick="CloseCart()" style="color: white; width: 15px; border: none; border-radius: 5px; background-color: rgb(187, 187, 187); cursor: pointer;">x</button>
+  <br>
+  
+  <div style="margin-top: 10px;">
+    <div style="display: flex; align-items: center;">
+  <h2 style="display: flex; justify-content: center; align-items: center;">Pedido</h2>
+  <div style="display: flex; justify-content: center; align-items: center;">
+  <span onclick="limparBag()" id="lixeira" style="position: relative; left: 205px; margin-top: 6.5px; cursor: pointer;"><i class="bi bi-trash-fill"></i></span>
+    <span onmouseover="avisoApear()" onmouseout="avisoDesapear()" style="position: relative; left: 165px; font-size: 18px; top: 4px; cursor: pointer;" onclick="Adiciona()"><i class="bi bi-arrow-clockwise"></i></span>
+  </div>
+  </div>
+  <br>
+  <p style="color: rgb(31, 31, 31);"><span style="color: rgb(24, 24, 24);">ÍTENS:</span></p>
+  <span style="color: rgb(89, 88, 88); font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;" id="itens"></span>
+  <br>
+  <br>
+  <p style="color:rgb(98, 98, 98);"><span style="color: rgb(15, 15, 15) ;">TOTAL:</span> <span id="valorReal"></span></p>
+  <label style="color: gray; position: relative; top: 8px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;" for="endereco">Endereço de Entrega:</label>
+  <br>
+  <input style=" border: 1px solid gray; width: 100px; padding-left: 50px; padding-right: 50px; margin-left: 1px; margin-top: 15px;" id="endereco" type="text">
+  </div>
+  <br>
+  <button id="FinalizarPedido" style="background-color: rgb(85, 204, 85); color: white; border: none; padding: 15px; border-radius: 5px; margin-top: 3px; padding-right: 100px; padding-left: 100px;">Finalizar Pedido</button>
+
+</div>
+
+
+</div>
+
+<!--INÍCIO DO CARDÁPIO-->
+
+<div style="margin-left: 15px; margin-bottom: 20px; margin-top: 30px;">
+
+  <h2 style="font-family: sans-serif; font-size: 20px;">SANDUICHES</h2>
+  
+  </div>
+  
+<!--PRODUTOS-->
+
+   <main class="produto">
+
+<!--PRIMEIRO PRODUTO-->
+
+      <div style="margin-bottom: 50px;">
+
+         <div style="display: flex; justify-content: space-between; margin: 2px; align-items: center;">
+             
+            <div>
+              <img id="Img1" style=" border-radius: 10px; margin: 5px;" width="100px" src="https://churrasco.coz.br/wp-content/uploads/2021/01/hamburguer-na-churrasqueira.jpg">
+            </div>
+            <div>
+              <p><span style="font-weight: bold;">MacWrong:</span> hamburguer duplo, Ovo, Alface, Tomate, Bacon, chedar</p>
+              <br>
+              <p style="font-weight: bold;">$18.50<p> 
+            </div>
+            <div style="position: relative; top: 35px; font-size: 20px; display: flex; justify-content: center; align-items: baseline;">
+              <span onclick="Adiciona()" style="margin: 5px; cursor: pointer; color: rgb(255, 38, 0); display: flex; justify-content: center; align-items: center; position: relative; bottom: 5px; "><i class="bi bi-cart-plus-fill"></i></span>
+              <div class="botQuant">
+
+                <!--<button onclick="Burger1Adc()" style="cursor: pointer; background-color: rgb(255, 255, 255);border: 1px solid black; border-radius: 3px; color: rgb(255, 0, 0); height: 15px; width: 15px; margin: 2px; margin-top: 3px; display: flex; justify-content: center; align-items: center; font-size: 25px;">+</button>
+                <span class="valorUnidade1"><p style="font-size: 10px; position: relative; top:1px; left: 6px; border: 1px solid black;">0</p></span>
+                <button onclick="Burger1Decrease()" style="cursor: pointer; background-color: rgb(255, 255, 255); color:rgb(255, 0, 0); border: none; border-radius: 3px; height: 15px; width: 15px; margin: 2px; margin-top: 3px; display: flex; justify-content: center; align-items: center; font-size: 25px; border: 1px solid black; margin-left:15px;">-</button>
+              -->
+             <button onclick="Burger1Adc()" style="width: 20px; font-size: 30px; background: none; border: none; color: red; cursor: pointer;">+</button>
+             <span class="valorUnidade1" style="width: 20px; display: flex; justify-content: center; align-items: center; font-size: 13px;">0</span>
+             <button onclick="Burger1Decrease()" style="width: 20px; font-size: 30px; background: none; border: none; color: red; margin-bottom: 2px; cursor: pointer;">-</button>
+             </div>
+            
+            </div>
+            
+
+         </div>
+
+
+      </div>
+    
+      <!--FIM DO PRIMEIRO PRODUTO-->
+
+      <div style="margin-bottom: 50px;">
+
+        <div style="display: flex; justify-content: space-between; margin: 5px; align-items: center;">
+            
+           <div>
+             <img style="border-radius: 10px; margin: 5px;" width="100px" src="https://apaulista.com.br/wp-content/uploads/2019/03/sanduiche-tradicional-1.png">
+           </div>
+           <div>
+             <p><span style="font-weight: bold;">Sanduiche tradicional:</span> hamburguer, queijo, alface, tomate e ovo</p>
+             <br>
+             <p style="font-weight: bold;">$10.50<p> 
+           </div>
+           <div style="position: relative; top: 35px; font-size: 20px; display: flex; justify-content: center; align-items: center;">
+            <span onclick="Adiciona()" style="margin: 5px; cursor: pointer; color: rgb(255, 38, 0); display: flex; justify-content: center; align-items: center; position: relative; bottom: 3px; "><i class="bi bi-cart-plus-fill"></i></span>
+              <div class="botQuant">
+
+                <!--<button onclick="Burger1Adc()" style="cursor: pointer; background-color: rgb(255, 255, 255);border: 1px solid black; border-radius: 3px; color: rgb(255, 0, 0); height: 15px; width: 15px; margin: 2px; margin-top: 3px; display: flex; justify-content: center; align-items: center; font-size: 25px;">+</button>
+                <span class="valorUnidade1"><p style="font-size: 10px; position: relative; top:1px; left: 6px; border: 1px solid black;">0</p></span>
+                <button onclick="Burger1Decrease()" style="cursor: pointer; background-color: rgb(255, 255, 255); color:rgb(255, 0, 0); border: none; border-radius: 3px; height: 15px; width: 15px; margin: 2px; margin-top: 3px; display: flex; justify-content: center; align-items: center; font-size: 25px; border: 1px solid black; margin-left:15px;">-</button>
+              -->
+             <button onclick="Burger2Adc()" style="width: 20px; font-size: 30px; background: none; border: none; color: red;cursor: pointer;">+</button>
+             <span class="valorUnidade2" style="width: 20px; display: flex; justify-content: center; align-items: center; font-size: 13px;">0</span>
+             <button onclick="Burger2Decrease()" style="width: 20px; font-size: 30px; background: none; border: none; color: red; margin-bottom: 2px;cursor: pointer;">-</button>
+           </div>
+            </div>
+
+        </div>
+
+
+     </div>
+
+     <!--FIM DO SEGUNDO-->
+
+     <div style="margin-bottom: 50px;">
+
+      <div style="display: flex; justify-content: space-between; margin: 5px; align-items: center;">
+          
+         <div>
+           <img style="border-radius: 10px; margin: 5px;" width="100px" src="https://shoppingdostemperos.com.br/wp-content/uploads/2023/12/Hamburguer-Artesanal-768x768.jpg">
+         </div>
+         <div>
+           <p><span style="font-weight: bold;">MacAll:</span> hamburguer, alface, chedar, bacon, mostarda, calabresa...</p>
+           <br>
+           <p style="font-weight: bold;">$12.50<p> 
+         </div>
+         <div style="position: relative; top: 35px; font-size: 20px; display: flex; justify-content: center; align-items: center;">
+          <span onclick="Adiciona()" style="margin: 5px; cursor: pointer; color: rgb(255, 38, 0); display: flex; justify-content: center; align-items: center; position: relative; bottom: 3px; "><i class="bi bi-cart-plus-fill"></i></span>
+          <div class="botQuant">
+
+            <!--<button onclick="Burger1Adc()" style="cursor: pointer; background-color: rgb(255, 255, 255);border: 1px solid black; border-radius: 3px; color: rgb(255, 0, 0); height: 15px; width: 15px; margin: 2px; margin-top: 3px; display: flex; justify-content: center; align-items: center; font-size: 25px;">+</button>
+            <span class="valorUnidade1"><p style="font-size: 10px; position: relative; top:1px; left: 6px; border: 1px solid black;">0</p></span>
+            <button onclick="Burger1Decrease()" style="cursor: pointer; background-color: rgb(255, 255, 255); color:rgb(255, 0, 0); border: none; border-radius: 3px; height: 15px; width: 15px; margin: 2px; margin-top: 3px; display: flex; justify-content: center; align-items: center; font-size: 25px; border: 1px solid black; margin-left:15px;">-</button>
+          -->
+         <button onclick="Burger3Adc()" style="width: 20px; font-size: 30px; background: none; border: none; color: red; cursor: pointer;">+</button>
+         <span class="valorUnidade3" style="width: 20px; display: flex; justify-content: center; align-items: center; font-size: 13px;">0</span>
+         <button onclick="Burger3Decrease()" style="width: 20px; font-size: 30px; background: none; border: none; color: red; margin-bottom: 2px;cursor: pointer;">-</button>
+        </div>
+
+      </div>
+
+
+   </div>
+
+   <!--FIM DO TERCEIRO-->
+
+   <div style="margin-bottom: 50px; margin-top: 50px;">
+
+    <div style="display: flex; justify-content: space-between; margin: 5px; align-items: center;">
+        
+       <div>
+         <img style="border-radius: 10px; margin: 5px;" width="100px" src="https://brasilia.deboa.com/wp-content/uploads/2024/05/Dia-Mundial-do-Hamb%C3%BArguer-Gel%C3%A9ia-Burger-traz-oferta-e-sandu%C3%ADche-exclusivo-para-a-data_DeBoa-Brasilia.jpg">
+       </div>
+       <div>
+         <p><span style="font-weight: bold;">Simpleburg:</span> hamburguer, Ovo, Alface, Tomate, Queijo, chedar</p>
+         <br>
+         <p style="font-weight: bold;">$7.50<p> 
+       </div>
+       <div style="position: relative; top: 35px; font-size: 20px; display: flex; justify-content: center; align-items: center;">
+        <span onclick="Adiciona()" style="margin: 5px; cursor: pointer; color: rgb(255, 38, 0); display: flex; justify-content: center; align-items: center; position: relative; bottom: 3px; "><i class="bi bi-cart-plus-fill"></i></span>
+        <div class="botQuant">
+
+          <!--<button onclick="Burger1Adc()" style="cursor: pointer; background-color: rgb(255, 255, 255);border: 1px solid black; border-radius: 3px; color: rgb(255, 0, 0); height: 15px; width: 15px; margin: 2px; margin-top: 3px; display: flex; justify-content: center; align-items: center; font-size: 25px;">+</button>
+          <span class="valorUnidade1"><p style="font-size: 10px; position: relative; top:1px; left: 6px; border: 1px solid black;">0</p></span>
+          <button onclick="Burger1Decrease()" style="cursor: pointer; background-color: rgb(255, 255, 255); color:rgb(255, 0, 0); border: none; border-radius: 3px; height: 15px; width: 15px; margin: 2px; margin-top: 3px; display: flex; justify-content: center; align-items: center; font-size: 25px; border: 1px solid black; margin-left:15px;">-</button>
+        -->
+       <button onclick="Burger4Adc()" style="width: 20px; font-size: 30px; background: none; border: none; color: red;cursor: pointer;">+</button>
+       <span class="valorUnidade4" style="width: 20px; display: flex; justify-content: center; align-items: center; font-size: 13px;">0</span>
+       <button onclick="Burger4Decrease()" style="width: 20px; font-size: 30px; background: none; border: none; color: red; margin-bottom: 2px; cursor: pointer;">-</button>
+      </div>
+
+    </div>
+
+
+ </div>
+
+ <!--FIM DO QUARTO-->
+
+
+ <div style="margin-left: 15px; margin-bottom: 20px; margin-top: 50px;">
+
+  <h2 style="font-family: sans-serif; font-size: 20px;">BEBIDAS</h2>
+  
+  </div>
+
+  <div style="margin-bottom: 30px;">
+
+    <div style="display: flex; margin: 5px; align-items: center; justify-content: space-between;">
+        
+       <div>
+         <img style=" border-radius: 10px; margin: 5px;" width="100px" src="https://s3-sa-east-1.amazonaws.com/loja2/776530409c6ca3de56445d1c51a5faa5.png">
+       </div>
+       <div style="position: relative; right: 45px;">
+         <p>Pepse 350ml</p>
+         <br>
+         <p style="font-weight: bold;">$10.50<p> 
+       </div>
+       <div style="position: relative; top: 35px; font-size: 20px; display: flex; justify-content: center; align-items: center;">
+        <span onclick="Adiciona()" style="margin: 5px; cursor: pointer; color: rgb(255, 38, 0); display: flex; justify-content: center; align-items: center; position: relative; bottom: 3px; "><i class="bi bi-cart-plus-fill"></i></span>
+              <div class="botQuant">
+
+                <!--<button onclick="Burger1Adc()" style="cursor: pointer; background-color: rgb(255, 255, 255);border: 1px solid black; border-radius: 3px; color: rgb(255, 0, 0); height: 15px; width: 15px; margin: 2px; margin-top: 3px; display: flex; justify-content: center; align-items: center; font-size: 25px;">+</button>
+                <span class="valorUnidade1"><p style="font-size: 10px; position: relative; top:1px; left: 6px; border: 1px solid black;">0</p></span>
+                <button onclick="Burger1Decrease()" style="cursor: pointer; background-color: rgb(255, 255, 255); color:rgb(255, 0, 0); border: none; border-radius: 3px; height: 15px; width: 15px; margin: 2px; margin-top: 3px; display: flex; justify-content: center; align-items: center; font-size: 25px; border: 1px solid black; margin-left:15px;">-</button>
+              -->
+             <button onclick="Bebida1Adc()" style="width: 20px; font-size: 30px; background: none; border: none; color: red;cursor: pointer;">+</button>
+             <span class="valorUnidade5" style="width: 20px; display: flex; justify-content: center; align-items: center; font-size: 13px;">0</span>
+             <button onclick="Bebida1Decrease()" style="width: 20px; font-size: 30px; background: none; border: none; color: red; margin-bottom: 2px;cursor: pointer;">-</button>
+      </div>
+    </div>
+
+
+ </div>
+ <!--FIM DO QUINTO-->
+
+ <div style="margin-bottom: 30px; margin-top: 30px;">
+
+  <div style="display: flex;  margin: 5px; align-items: center; justify-content: space-between;">
+      
+     <div>
+       <img style="border-radius: 10px; margin: 5px;" width="100px" src="https://tdc0wy.vteximg.com.br/arquivos/ids/163809-1000-1000/REFRIGERANTE-COCA-COLA-LATA-350ML-ZERO.png?v=638504174206930000">
+     </div>
+     <div style=" position: relative; right: 30px;">
+       <p>Coca-Cola 350ml</p>
+       <br>
+       <p style="font-weight: bold;">$11.50<p> 
+     </div>
+     <div style="position: relative; top: 35px; font-size: 20px; display: flex; justify-content: center; align-items: center;">
+      <span onclick="Adiciona()" style="margin: 5px; cursor: pointer; color: rgb(255, 38, 0); display: flex; justify-content: center; align-items: center; position: relative; bottom: 3px; "><i class="bi bi-cart-plus-fill"></i></span>
+      <div class="botQuant">
+
+        <!--<button onclick="Burger1Adc()" style="cursor: pointer; background-color: rgb(255, 255, 255);border: 1px solid black; border-radius: 3px; color: rgb(255, 0, 0); height: 15px; width: 15px; margin: 2px; margin-top: 3px; display: flex; justify-content: center; align-items: center; font-size: 25px;">+</button>
+        <span class="valorUnidade1"><p style="font-size: 10px; position: relative; top:1px; left: 6px; border: 1px solid black;">0</p></span>
+        <button onclick="Burger1Decrease()" style="cursor: pointer; background-color: rgb(255, 255, 255); color:rgb(255, 0, 0); border: none; border-radius: 3px; height: 15px; width: 15px; margin: 2px; margin-top: 3px; display: flex; justify-content: center; align-items: center; font-size: 25px; border: 1px solid black; margin-left:15px;">-</button>
+      -->
+     <button onclick="Bebida2Adc()" style="width: 20px; font-size: 30px; background: none; border: none; color: red;cursor: pointer;">+</button>
+     <span class="valorUnidade6" style="width: 20px; display: flex; justify-content: center; align-items: center; font-size: 13px;">0</span>
+     <button onclick="Bebida2Decrease()" style="width: 20px; font-size: 30px; background: none; border: none; color: red; margin-bottom: 2px;cursor: pointer;">-</button>
+    </div>
+  </div>
+
+
+</div>
+<!--FIM DO SEXTO-->
+
+<div style="margin-bottom: 30px; margin-top: 30px;">
+
+  <div style="display: flex; margin: 5px; align-items: center; justify-content: space-between;">
+      
+     <div>
+       <img style=" border-radius: 10px; margin: 5px;" width="100px" src="https://supermercadopaisefilhos.loji.com.br/storage/uploads/sEzjmxf3h8HBavyTx2jweXk9MvUjTB50gZRmVMWq.png">
+     </div>
+     <div style=" position: relative; right: 16px;">
+       <p>Fanta guaraná 350ml</p>
+       <br>
+       <p style="font-weight: bold;">$6.50<p> 
+     </div>
+     <div style="position: relative; top: 35px; font-size: 20px; display: flex; justify-content: center; align-items: center;">
+      <span onclick="Adiciona()" style="margin: 5px; cursor: pointer; color: rgb(255, 38, 0); display: flex; justify-content: center; align-items: center; position: relative; bottom: 3px; "><i class="bi bi-cart-plus-fill"></i></span>
+              <div class="botQuant">
+
+                <!--<button onclick="Burger1Adc()" style="cursor: pointer; background-color: rgb(255, 255, 255);border: 1px solid black; border-radius: 3px; color: rgb(255, 0, 0); height: 15px; width: 15px; margin: 2px; margin-top: 3px; display: flex; justify-content: center; align-items: center; font-size: 25px;">+</button>
+                <span class="valorUnidade1"><p style="font-size: 10px; position: relative; top:1px; left: 6px; border: 1px solid black;">0</p></span>
+                <button onclick="Burger1Decrease()" style="cursor: pointer; background-color: rgb(255, 255, 255); color:rgb(255, 0, 0); border: none; border-radius: 3px; height: 15px; width: 15px; margin: 2px; margin-top: 3px; display: flex; justify-content: center; align-items: center; font-size: 25px; border: 1px solid black; margin-left:15px;">-</button>
+              -->
+             <button onclick="Bebida3Adc()" style="width: 20px; font-size: 30px; background: none; border: none; color: red;cursor: pointer;">+</button>
+             <span class="valorUnidade7" style="width: 20px; display: flex; justify-content: center; align-items: center; font-size: 13px;">0</span>
+             <button onclick="Bebida3Decrease()" style="width: 20px; font-size: 30px; background: none; border: none; color: red; margin-bottom: 2px;cursor: pointer;">-</button>
+    </div>
+
+  </div>
+
+
+</div>
+
+<!--FIM DO SÉTMO-->
+
+   </main>
+
+    <footer class="rodape">
+
+
+         <div class="menuLinks">
+
+            <ul class="listaDeLinks">
+
+               <li class="linkRo"><a href="#">POLÍTICAS DE PRIVACIDADE</a></li>
+               <li class="linkRo" ><a href="#">SOBRE</a></li>
+               <li class="linkRo"><a href="#">TRANSPARÊNCIA DA PÁGINA</a></li>
+               <li class="linkRo"><a href="#">INFORMAÇÕES DE CONTATO</a></li>
+               
+
+            </ul>
+
+         </div>
+    </footer>
+
+
+    <div style="display: flex; justify-content: center; align-items: center;background-color: rgb(0, 0, 0); " >
+      <h6 style="color:rgb(255, 255, 255); margin-top: 3px;">REDES SOCIAIS</h6>
+    </div>
+ 
+    
+
+    <div style="height: 200px;" class="redessociais">
+        
+      <span class="redes"><a href="#"><i class="bi bi-facebook"></i></a></span>
+        <span class="redes"><a href="#"><i class="bi bi-whatsapp"></i></a></span>
+        <span class="redes"><a href="#"><i class="bi bi-instagram"></i></a></span>
+    </div>
+
+    
+<script>
+
+   var burger1 = 0, burger2 = 0, burger3 =0, burger4 = 0;
+   var bebida1 = 0, bebida2 = 0, bebida3 =0; 
+   var valorL1 = 0, valorL2 = 0, valorL3 = 0, valorL4 = 0, valorL5 = 0, valorL6 = 0, valorL7 = 0;
+   var numBolsa = 0;
+   
+   
+   function Adiciona(){
+  
+    $('#UpDate').fadeOut();
+    //numBolsa += 1;
+    //document.getElementById("numB").innerHTML=numBolsa;
+    //localStorage.setItem("numB", numBolsa);
+    
+    $('#avisoAdc').fadeIn(1000);
+    $('#avisoAdc').fadeOut(2000);
+    document.getElementById('numB').innerHTML=burger1 + burger2 + burger3 + burger4 + bebida1 + bebida2 + bebida3;
+    localStorage.setItem('burger1', burger1);
+    localStorage.setItem('burger2', burger2);
+    localStorage.setItem('burger3', burger3);
+    localStorage.setItem('burger4', burger4);
+    localStorage.setItem('bebida1', bebida1);
+    localStorage.setItem('bebida2', bebida2);
+    localStorage.setItem('bebida3', bebida3);
+    
+    var L1 = document.getElementById('itens').innerHTML=burger1 + "x" + " MacWrong,  ";
+    var L2 = document.getElementById('itens').innerHTML=burger2 + "x" + " Sanduiche tradicional,  ";
+    var L3 = document.getElementById('itens').innerHTML=burger3 + "x" + " MacAll,  ";
+    var L4 = document.getElementById('itens').innerHTML=burger4 + "x" + " Simpleburg,  ";
+    var L5 = document.getElementById('itens').innerHTML=bebida1 + "x" + " Pepse 350ml,  ";
+    var L6 = document.getElementById('itens').innerHTML=bebida2 + "x" + " Coca-Cola 350ml,  ";
+    var L7 = document.getElementById('itens').innerHTML=bebida3 + "x" + " Fanta guaraná 350ml,  ";
+    
+    // SE O NÚMERO DE UNIDADES DE LANCHE FOR ZERO, LOGO NÃO IRÁ APARECER NO BOX DE PEDIDO;
+
+    if(burger1 == 0){
+    L1 = "";
+    }
+
+    if(burger2 == 0){
+    L2 = "";
+    }
+
+    if(burger3 == 0){
+    L3 = "";
+    }
+    
+    if(burger4 == 0){
+    L4 = "";
+    }
+
+    if(bebida1 == 0){
+    L5 = "";
+    }
+
+    if(bebida2 == 0){
+    L6 = "";
+    }
+
+    if(bebida3 == 0){
+    L7 = "";
+    }
+
+    var somaLS = L1 + L2 + L3 + L4 + L5 + L6 + L7;
+
+    localStorage.setItem('somaLS', somaLS)
+
+    document.getElementById('itens').innerHTML=somaLS;
+    
+    var valoresPagantes = "$ " + parseFloat(valorL1 + valorL2 + valorL3 + valorL4 + valorL5 + valorL6 + valorL7);
+    localStorage.setItem('valoresPagantes', valoresPagantes);
+    document.getElementById('valorReal').innerHTML=valoresPagantes;
+  }
+document.getElementById('itens').innerHTML= localStorage.getItem('somaLS');
+document.getElementById('valorReal').innerHTML= localStorage.getItem('valoresPagantes');
+
+
+
+  function avisoApear(){
+$('#UpDate').fadeIn(1000);
+  }
+
+  function avisoDesapear(){
+    $('#UpDate').fadeOut();
+  }
+
+
+
+function limparBag(){
+
+var limpar = Adiciona();
+limpar = "";
+document.getElementById('itens').innerHTML=limpar;
+document.getElementById('valorReal').innerHTML=limpar;
+document.getElementById('numB').innerHTML=0;
+$('#avisoAdc').hide();
+$('#avisoAdc').hide();
+
+
+}
+
+
+
+
+
+   
+// AQUI ABAIXO É REALIZADO A SOMA DA QUANTIDADE DE LANCHES.
+
+    var burgerA = parseFloat(localStorage.getItem('burger1')) || 0;
+    var burgerB = parseFloat(localStorage.getItem('burger2')) || 0;
+    var burgerC = parseFloat(localStorage.getItem('burger3')) || 0;
+    var burgerD = parseFloat(localStorage.getItem('burger4')) || 0;
+    var bebidaA = parseFloat(localStorage.getItem('bebida1')) || 0;
+    var bebidaB = parseFloat(localStorage.getItem('bebida2')) || 0;
+    var bebidaC = parseFloat(localStorage.getItem('bebida3')) || 0;
+    
+    var somaLanches = burgerA + burgerB + burgerC + burgerD + bebidaA + bebidaB + bebidaC;
+    localStorage.setItem("somaLan", somaLanches);
+    
+    document.getElementById('numB').innerHTML= somaLanches;
+
+   function Burger1Adc(){
+
+     burger1+=1;
+    
+     valorL1+=18.50;
+     document.querySelector(".valorUnidade1").innerHTML=burger1;
+     document.getElementById('itens').innerHTML=burger1 + "x" + " MacWrong +";
+     const p = document.querySelector('.valorUnidade1');
+     //p.style.fontSize="10px";
+     //p.style.position = 'relative';
+     //p.style.left = '5px'
+   }
+
+   function Burger1Decrease(){
+
+burger1-=1;
+if(burger1 < 0){
+
+burger1 = 0;
+
+}
+valorL1-=18.50;
+if(valorL1 < 0){
+
+valorL1 = 0;
+
+}
+document.querySelector(".valorUnidade1").innerHTML=burger1;
+document.getElementById('itens').innerHTML=burger1 + "x" + " MacWrong -";
+const p = document.querySelector('.valorUnidade1');
+//p.style.fontSize="10px";
+//p.style.position = 'relative';
+//p.style.left = '5px';
+
+}
+
+   function Burger2Adc(){
+
+burger2+=1;
+valorL2+=10.50;
+document.querySelector(".valorUnidade2").innerHTML=burger2;
+document.getElementById('itens').innerHTML=burger2 + "x" + " Sanduiche tradicional +";
+const p = document.querySelector('.valorUnidade2');
+//p.style.fontSize="10px";
+//p.style.position = 'relative';
+//p.style.left = '5px'
+}
+
+function Burger2Decrease(){
+
+burger2-=1;
+if(burger2 < 0){
+
+burger2 = 0;
+
+}
+valorL2-=10.50;
+if(valorL2 < 0){
+
+valorL2 = 0;
+
+}
+document.querySelector(".valorUnidade2").innerHTML=burger2;
+document.getElementById('itens').innerHTML=burger2 + "x" + " Sanduiche tradicional -";
+const p = document.querySelector('.valorUnidade2');
+//p.style.fontSize="10px";
+//p.style.position = 'relative';
+//p.style.left = '5px'
+}
+
+
+function Burger3Adc(){
+
+burger3+=1;
+valorL3+=12.50;
+document.querySelector(".valorUnidade3").innerHTML=burger3;
+document.getElementById('itens').innerHTML=burger3 + "x" + " MacAll +";
+const p = document.querySelector('.valorUnidade3');
+//p.style.fontSize="10px";
+//p.style.position = 'relative';
+//p.style.left = '5px'
+}
+
+function Burger3Decrease(){
+
+burger3-=1;
+if(burger3 < 0){
+
+burger3 = 0;
+
+}
+valorL3-=10.50;
+if(valorL3 < 0){
+
+valorL3 = 0;
+
+}
+document.querySelector(".valorUnidade3").innerHTML=burger3;
+document.getElementById('itens').innerHTML=burger3 + "x" + " MacAll -";
+const p = document.querySelector('.valorUnidade3');
+//p.style.fontSize="10px";
+//p.style.position = 'relative';
+//p.style.left = '5px'
+}
+
+function Burger4Adc(){
+
+burger4+=1;
+valorL4+=7.50;
+document.querySelector(".valorUnidade4").innerHTML=burger4;
+document.getElementById('itens').innerHTML=burger4 + "x" + " Simpleburg +";
+const p = document.querySelector('.valorUnidade4');
+//p.style.fontSize="10px";
+//p.style.position = 'relative';
+//p.style.left = '5px'
+}
+
+function Burger4Decrease(){
+
+burger4-=1;
+if(burger4 < 0){
+
+burger4 = 0;
+
+}
+valorL4-=7.50;
+if(valorL4 < 0){
+
+valorL4 = 0;
+
+}
+document.querySelector(".valorUnidade4").innerHTML=burger4;
+document.getElementById('itens').innerHTML=burger4 + "x" + " Simpleburg -";
+const p = document.querySelector('.valorUnidade4');
+//p.style.fontSize="10px";
+//p.style.position = 'relative';
+//p.style.left = '5px'
+}
+
+function Bebida1Adc(){
+
+bebida1+=1;
+valorL5+=10.50;
+document.querySelector(".valorUnidade5").innerHTML=bebida1;
+document.getElementById('itens').innerHTML=bebida1 + "x" + " Pepse 350ml +";
+const p = document.querySelector('.valorUnidade5');
+//p.style.fontSize="10px";
+//p.style.position = 'relative';
+//p.style.left = '5px'
+}
+
+function Bebida1Decrease(){
+
+bebida1-=1;
+if(bebida1 < 0){
+
+bebida1 = 0;
+
+}
+valorL5-=10.50;
+if(valorL5 < 0){
+
+valorL5 = 0;
+
+}
+document.querySelector(".valorUnidade5").innerHTML=bebida1;
+document.getElementById('itens').innerHTML=bebida1 + "x" + " Pepse 350ml -";
+const p = document.querySelector('.valorUnidade5');
+//p.style.fontSize="10px";
+//p.style.position = 'relative';
+//p.style.left = '5px'
+}
+
+
+function Bebida2Adc(){
+
+bebida2+=1;
+valorL6+=11.50;
+document.querySelector(".valorUnidade6").innerHTML=bebida2;
+document.getElementById('itens').innerHTML=bebida2 + "x" + " Coca-Cola 350ml +";
+const p = document.querySelector('.valorUnidade6');
+//p.style.fontSize="10px";
+//p.style.position = 'relative';
+//p.style.left = '5px'
+}
+
+function Bebida2Decrease(){
+
+bebida2-=1;
+if(bebida2 < 0){
+
+bebida2 = 0;
+
+}
+valorL6-=11.50;
+if(valorL6 < 0){
+
+valorL6 = 0;
+
+}
+document.querySelector(".valorUnidade6").innerHTML=bebida2;
+document.getElementById('itens').innerHTML=bebida2 + "x" + " Coca-Cola 350ml -";
+const p = document.querySelector('.valorUnidade6');
+//p.style.fontSize="10px";
+//p.style.position = 'relative';
+//p.style.left = '5px'
+}
+
+function Bebida3Adc(){
+
+bebida3+=1;
+valorL7+=6.50;
+document.querySelector(".valorUnidade7").innerHTML=bebida3;
+document.getElementById('itens').innerHTML= bebida3 + "x" + " Fanta guaraná 350ml +";
+const p = document.querySelector('.valorUnidade7');
+//p.style.fontSize="10px";
+//p.style.position = 'relative';
+//p.style.left = '5px'
+}
+
+function Bebida3Decrease(){
+
+bebida3-=1;
+if(bebida3 < 0){
+
+bebida3 = 0;
+
+}
+valorL7-=6.50;
+if(valorL7 < 0){
+
+valorL7 = 0;
+
+}
+document.querySelector(".valorUnidade7").innerHTML=bebida3;
+document.getElementById('itens').innerHTML=bebida3 + "x" + " Fanta guaraná 350ml -";
+const p = document.querySelector('.valorUnidade7');
+//p.style.fontSize="10px";
+//p.style.position = 'relative';
+//p.style.left = '5px'
+}
+
+
+
+   function VerCart(){
+    $('#BoxSacola').show();  
+    $('#modal').show();
+   }
+
+   function CloseCart(){
+    //$('#BoxSacola').hide();
+    $('#BoxSacola').slideUp();
+    $('#modal').hide();
+   }
+
+   //var Dado = localStorage.getItem("numB", numBolsa);
+   //document.getElementById("numB").innerHTML=Dado;
+
+   document.getElementById('FinalizarPedido').onclick = function(){
+
+alert('Deseja finalizar pedido?')
+
+   }
+  
+</script>
+</body>
+
+</html>
